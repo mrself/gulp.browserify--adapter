@@ -1,0 +1,29 @@
+{
+  "name": "gulp.browserify--adapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "test.watch": "./node_modules/.bin/mocha -w test/*.js"
+  },
+  "author": "Yaroslav Vavrysh <yaruk.my@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^13.1.0",
+    "deep-extend": "^0.4.1",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "fs-extra": "^0.30.0",
+    "gulp": "^3.9.1",
+    "gulp-jsdoc3": "^0.3.0",
+    "gulp-watch": "^4.3.9",
+    "jsdoc": "^3.4.0",
+    "mocha": "^3.0.1"
+  }
+}
