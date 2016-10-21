@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "test.watch": "./node_modules/.bin/mocha -w test/*.js"
+    "test.watch": "./node_modules/.bin/mocha -w test/*.js",
+    "postversion": "git checkout master && git merge develop && git push && git push --tags && git checkout develop"
   },
   "author": "Yaroslav Vavrysh <yaruk.my@gmail.com>",
   "license": "MIT",
