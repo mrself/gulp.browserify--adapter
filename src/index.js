@@ -39,7 +39,7 @@ Browserify.prototype = {
 		this.checkEntryOption();
 		this.checkOutputNameOption();
 		this.ensureOutputNameOption();
-		this.options.dest = path.dirname(this.options.entry);
+		this.options.dest = this.options.dest || path.dirname(this.options.entry);
 	},
 
 	/**
