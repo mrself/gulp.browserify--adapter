@@ -161,6 +161,7 @@ Browserify.defaults = {
 		fullPaths: false
 	},
 	log: true,
+	watch: true,
 	onEnd: new Function()
 };
 
