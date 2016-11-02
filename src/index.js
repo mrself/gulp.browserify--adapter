@@ -37,8 +37,8 @@ Browserify.prototype = {
 	setOptions: function(options) {
 		this.options = extend({}, Browserify.defaults, options);
 		this.checkEntryOption();
-		this.checkOutputNameOption();
 		this.ensureOutputNameOption();
+		this.checkOutputNameOption();
 		this.options.dest = this.options.dest || path.dirname(this.options.entry);
 	},
 
