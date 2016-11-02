@@ -38,7 +38,6 @@ Browserify.prototype = {
 		this.options = extend({}, Browserify.defaults, options);
 		this.checkEntryOption();
 		this.ensureOutputNameOption();
-		this.checkOutputNameOption();
 		this.options.dest = this.options.dest || path.dirname(this.options.entry);
 	},
 
@@ -54,11 +53,6 @@ Browserify.prototype = {
 	makeOutputName: function() {
 		var entryExt = path.extname(this.options.entry);
 		return path.basename(this.options.entry, entryExt) + '.min' + entryExt;
-	},
-
-	checkOutputNameOption: function() {
-		if (this.options.outputName == path.basename(this.options.entry))
-			console.warn('Entry and dest file are the same');
 	},
 
 	/**
