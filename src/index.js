@@ -80,6 +80,10 @@ Browserify.prototype = {
 		this.bundle();
 	},
 
+	/**
+	 * @this {Browserify#b}
+	 * @param  {Object} err Stream error
+	 */
 	onError: function(err) {
 		new gutil.PluginError('Browserify', err.message);
 		this.emit('end');
