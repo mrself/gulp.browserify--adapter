@@ -79,24 +79,3 @@ describe('#makeOutputName', function() {
 		expect(bs.makeOutputName()).to.equal('index.min.js');
 	});
 });
-
-/** Todo: end this spec */
-/*describe('watch option', function() {
-	it.only ('without errors', function(cb) {
-		Bs.run({
-			entry: './test-fake/fake/index.js',
-			watch: true,
-			onEnd: function() {
-				l(child)
-				child.kill();
-				// exec('exit', function(e) {
-				// 	if (e) throw e;
-				// });
-				fs.access('./test-fake/fake/index.min.js', function(e) {
-					if (!e) assert(false);
-					cb();
-				});
-			}
-		});
-	});
-});*/
