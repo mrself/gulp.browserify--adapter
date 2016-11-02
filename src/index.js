@@ -85,7 +85,7 @@ Browserify.prototype = {
 	 * @param  {Object} err Stream error
 	 */
 	onError: function(err) {
-		new gutil.PluginError('Browserify', err.message);
+		gutil.log(gutil.colors.red('Error (Browserify): ' + err.message));
 		this.emit('end');
 		gutil.beep();
 	},
