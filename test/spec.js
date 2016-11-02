@@ -60,7 +60,7 @@ afterEach(function(cb) {
 });
 
 describe('.run', function() {
-	it ('bundle file should exist', function(cb) {
+	it ('bundled file exists', function(cb) {
 		Bs.run({entry: './test-fake/fake/index.js', onEnd: function() {
 			fs.access('./test-fake/fake/index.min.js', function(e) {
 				if (e) l(e), assert(false);
