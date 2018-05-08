@@ -61,7 +61,7 @@ afterEach(function(cb) {
 
 describe('.run', function() {
 	it ('bundled file exists', function(cb) {
-		Bs.run({entry: './test-fake/fake/index.js', onEnd: function() {
+		Bs.run({entry: './test-fake/fake/index.js', watch: false, onEnd: function() {
 			fs.access('./test-fake/fake/index.min.js', function(e) {
 				if (e) l(e), assert(false);
 				cb();

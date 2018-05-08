@@ -127,7 +127,11 @@ Browserify.prototype = {
 	 * @return {Object} browserify bundle
 	 */
 	makeBroswerifyBundle: function() {
-		return browserify(this.options.entry, this.options.browserify);
+		var bundle = browserify(this.options.entry, this.options.browserify);
+		this.options.transform.forEach(function(i) {
+			bundle = bundle.transform(i[0], i[1] || {});
+		});
+		return bundle;
 	},
 };
 
@@ -160,7 +164,8 @@ Browserify.defaults = {
 	},
 	log: true,
 	watch: true,
-	onEnd: new Function()
+	onEnd: new Function(),
+	transform: []
 };
 
 
